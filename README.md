@@ -1,5 +1,5 @@
 # Solitaire-Solver
-An AI algorithm to solve Peg Solitaire (also known as Brainvita in India), implemented in the C programming language. This project increased my dexterity with dynamic memory allocation, data structures, and a graph traversal algorithm. Rules of the game are discussed in "The Game" subsection. Usage of the AI and the program is indicated at the bottom of this page.
+An AI algorithm to solve Peg Solitaire (also known as Brainvita in India), implemented in the C programming language. This project increased my dexterity with dynamic memory allocation, data structures, and a graph traversal algorithm. When the AI solver is called,  Usage of the AI and the program is indicated at the bottom of this page.
 
 Solving Peg Solitaire belongs to a class of problems known as _NP-Complete_, famously including the _Travelling Salesman Problem_ as an example. NP-completeness of Peg Solitaire is discussed in [this paper](https://dspace.jaist.ac.jp/dspace/bitstream/10119/4709/1/3951.pdf) These are problems that run in exponential time as a function of the size of the problem, even with the best algorithms. 
 
@@ -13,7 +13,7 @@ As explained in this [wikipedia page](https://en.wikipedia.org/wiki/Peg_solitair
 The code was adapted from the open-source terminal version made available by [Maurits van der Schee](https://github.com/mevdschee/peg-solitaire.c). I implemented the AI solver function, and all files are included in the src file. 
 
 ## The AI algorithm
-
+The possible configurations of the game is a tuple made of an _m x m_ grid board, called a _state_. The graph for the algorithm to search the solution _G = <V, E>_ is implicitly defined, where _V_ is all possible configurations (the state space), and edges _E_ are the legal jump actions that connect two vertices. Each node of the graph contains information about the state of the board (among others like pointers to parent nodes, the depth of the node, the action taken to create the node, etc.). Solution is found using DFS (depth-first search), and the maximum number of expanded nodes (called the "budget") are set by the user. Duplicates states have been checked and avoided during search. The algorithm returns the best solution found, i.e. the path leading to the least number of remaining pegs. The game engine will execute this solution live on the console. 
 
 ## Usage
 Compile all files using the makefile.
@@ -40,6 +40,4 @@ For example:
 ```
 Will run the 7th level expanding 2 million nodes at maximum, and will play the solution found, on the command line. 
 
-
-## Big-O Analysis
 
