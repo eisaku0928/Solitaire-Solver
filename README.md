@@ -3,7 +3,7 @@ An AI algorithm to solve Peg Solitaire (also known as Brainvita in India), imple
 
 Solving Peg Solitaire belongs to a class of problems known as _NP-Complete_, famously including the _Travelling Salesman Problem_ as an example. NP-completeness of Peg Solitaire is discussed in [this paper](https://dspace.jaist.ac.jp/dspace/bitstream/10119/4709/1/3951.pdf) These are problems that run in exponential time as a function of the size of the problem, even with the best algorithms. I have written a [experimentation report](https://github.com/EisakuDanielTanaka/Solitaire-Solver/blob/main/lab_report.pdf) on the solution quality (number of pegs left) as a function of the problem size (initial number of pegs), as well as the impact of budgets on the solution quality for large size problems. 
 
-\<gif\>
+![Pegsol AI executing solution](https://github.com/EisakuDanielTanaka/Solitaire-Solver/blob/main/pegsol.gif)
 
 ## The Game
 Peg Solitaire was invented in the 17th century in Madagascar, and rules appear in a french cultural magazine in 1687. As a classic board game puzzle, several boards exist, differing in shape and size. The game is available for playing by compiling the code in this repository and using the keyboard, or using [a web version of the game](https://www.pegsolitaire.org/). 
