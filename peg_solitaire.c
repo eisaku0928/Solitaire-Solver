@@ -3,7 +3,6 @@
 	To play the AI implementation, run "./pegsol <level> AI <budget> play_solution" on the console.
  */
 
-
 #include "src/utils.h"
 #include "src/ai.h"
 #include <stdio.h>
