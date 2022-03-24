@@ -1,8 +1,5 @@
 # Solitaire-Solver
-A peg solitaire solving AI, a DFS (depth-first search) algorithm implemented in the C programming language. This project increased my dexterity with dynamic memory allocation, data structures, and a graph traversal algorithm.
-
-# What is peg solitaire?
-Peg solitaire is a puzzle
+An AI algorithm to solve Peg Solitaire (also known as Brainvita in India), implemented in the C programming language. This project increased my dexterity with dynamic memory allocation, data structures, and a graph traversal algorithm. 
 
 # Usage
 Compile all files using the makefile.
@@ -27,5 +24,10 @@ For example:
 ```
 Will run the 7th level expanding 2 million nodes at maximum, and will play the solution found, on the command line. 
 
-# Big O analysis and results summary
+## The Game
+Peg Solitaire was invented in the 17th century in Madagascar, and rules appear in a french cultural magazine in 1687. As a classic board game puzzle, several boards exist, differing in shape and size. The game is available for playing by compiling the code in this repository and using the keyboard, or using [a web version of the game](https://www.pegsolitaire.org/). 
+
+Though the code was adapted from the open-source terminal version made available by [Maurits van der Schee](https://github.com/mevdschee/peg-solitaire.c), I have completely implemented the AI portion, and all files are included in the src file. 
+
+## Big-O Analysis
 
