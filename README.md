@@ -1,5 +1,7 @@
 # Solitaire-Solver
-An AI algorithm to solve Peg Solitaire (also known as Brainvita in India), implemented in the C programming language. This project increased my dexterity with dynamic memory allocation, data structures, and a graph traversal algorithm. 
+An AI algorithm to solve Peg Solitaire (also known as Brainvita in India), implemented in the C programming language. This project increased my dexterity with dynamic memory allocation, data structures, and a graph traversal algorithm. Rules of the game are discussed in "The Game" subsection. 
+
+Solving Peg Solitaire belongs to a class of problems known as _NP-Complete_, famously including the _Travelling Salesman Problem_ as an example. NP-completeness of Peg Solitaire is discussed in [this paper](https://dspace.jaist.ac.jp/dspace/bitstream/10119/4709/1/3951.pdf) These are problems that run in exponential time as a function of the size of the problem, even with the best algorithms. 
 
 \<gif\>
 
