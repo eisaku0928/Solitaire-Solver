@@ -1,9 +1,6 @@
-/*
- ============================================================================
- Name        : peg-solitaire.c
- Author      : Maurits van der Schee
- Description : Console version of the game "peg-solitaire" for GNU/Linux
- ============================================================================
+ /*
+	Implementation of Peg Solitaire on the terminal.
+	To play the AI implementation, run "./pegsol <level> AI <budget> play_solution" on the console.
  */
 
 
@@ -60,21 +57,21 @@ int main(int argc, char *argv[]) {
 	    print_usage();
 	    return 0;
 	}
-	
+
 	state_t board_alloc;
 	state_t* board=&board_alloc;
-	
+
 	int layout = 0; // (default: 0)
 	sscanf (argv[1],"%d",&layout);
 
 	ai_run = false; // (default: false)
 	if(  argc > 2 && strcmp(argv[2],"AI")==0 )
 		ai_run = true;
-	
+
 	budget = 1000000; //(default: 1M)
 	if( argc > 3 )
 		sscanf (argv[3],"%d",&budget);
-	
+
 	show_solution = false; // (default: false)
 	if(  argc > 4 && strcmp(argv[4],"play_solution")==0 )
 		show_solution = true;
@@ -93,7 +90,7 @@ int main(int argc, char *argv[]) {
 	setBufferedInput(false);
 
 	//AI ALGORITHM
-	if( ai_run ){ 
+	if( ai_run ){
 		generated_nodes = 0;
 		expanded_nodes = 0;
 		solution_size = 0;
@@ -106,7 +103,7 @@ int main(int argc, char *argv[]) {
 		clock_t end = clock();
      	double cpu_time_used = ((double) (end - start)) / CLOCKS_PER_SEC;
 
-			
+
 		if( show_solution ) play_solution();
 
 		printf("SOLUTION:                               \n");
@@ -118,14 +115,14 @@ int main(int argc, char *argv[]) {
 		printf("\tExpanded/seconds: %d\n", (int)(expanded_nodes/cpu_time_used) );
 		printf("\tTime (seconds): %f\n", cpu_time_used );
 
-	
+
 
 		setBufferedInput(true);
 		printf("\033[?25h\033[0m");
 		return EXIT_SUCCESS;
 	}else{
 
-		
+
 		int8_t moves = 0;
 		char c;
 		bool success,move;
