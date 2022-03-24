@@ -1,7 +1,7 @@
 # Solitaire-Solver
-An AI algorithm to solve Peg Solitaire (also known as Brainvita in India), implemented in the C programming language. This project increased my dexterity with dynamic memory allocation, data structures, and a graph traversal algorithm. When the AI solver is called,  Usage of the AI and the program is indicated at the bottom of this page.
+An AI algorithm to solve Peg Solitaire (also known as Brainvita in India), implemented in the C programming language. This project increased my dexterity with dynamic memory allocation, data structures, and a graph traversal algorithm. When the AI solver is called,  Usage of the AI and the program is indicated at the bottom of this page. 
 
-Solving Peg Solitaire belongs to a class of problems known as _NP-Complete_, famously including the _Travelling Salesman Problem_ as an example. NP-completeness of Peg Solitaire is discussed in [this paper](https://dspace.jaist.ac.jp/dspace/bitstream/10119/4709/1/3951.pdf) These are problems that run in exponential time as a function of the size of the problem, even with the best algorithms. 
+Solving Peg Solitaire belongs to a class of problems known as _NP-Complete_, famously including the _Travelling Salesman Problem_ as an example. NP-completeness of Peg Solitaire is discussed in [this paper](https://dspace.jaist.ac.jp/dspace/bitstream/10119/4709/1/3951.pdf) These are problems that run in exponential time as a function of the size of the problem, even with the best algorithms. I have written a [experimentation report](https://github.com/EisakuDanielTanaka/Solitaire-Solver/blob/main/lab_report.pdf) on the solution quality (number of pegs left) as a function of the problem size (initial number of pegs), as well as the impact of budgets on the solution quality for large size problems. 
 
 \<gif\>
 
@@ -31,12 +31,12 @@ Alternatively, you can let the AI solve the level for you (my part of the implem
 Use the enter/return key to select and deselect a peg, and use arrow keys to indicate which direction to move the peg in. A peg can move only if it can jump over an adjacent peg and land on empty space. Quit, restart, and undo keys are: "q", "r", and "u". 
 
 ```
-./pegsol <level> AI <budget> play_solution
+$ ./pegsol <level> AI <budget> play_solution
 ```
 
 For example:
 ```
-./pegsol 6 AI 2000000 play_solution
+$ ./pegsol 6 AI 2000000 play_solution
 ```
 Will run the 7th level expanding 2 million nodes at maximum, and will play the solution found, on the command line. 
 
