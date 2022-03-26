@@ -191,7 +191,7 @@ void find_solution( state_t* init_state  ){
 					free(current);
 					current = parent;
 				}
-				// Free deepest child node of branch.
+				// Free deepest child node of branch. 
 				free(n);
 
 			}
